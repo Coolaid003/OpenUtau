@@ -221,7 +221,8 @@ namespace OpenUtau.App.Views {
                 FilePicker.VSQX,
                 FilePicker.UST,
                 FilePicker.MIDI,
-                FilePicker.UFDATA);
+                FilePicker.UFDATA,
+                FilePicker.MUSICXML);
             if (files == null || files.Length == 0) {
                 return;
             }
@@ -314,7 +315,8 @@ namespace OpenUtau.App.Views {
                 FilePicker.USTX,
                 FilePicker.VSQX,
                 FilePicker.UST,
-                FilePicker.MIDI);
+                FilePicker.MIDI,
+                FilePicker.MUSICXML);
             if (files == null || files.Length == 0) {
                 return;
             }
@@ -507,6 +509,15 @@ namespace OpenUtau.App.Views {
                 this, "menu.file.exportmidi", FilePicker.MIDI);
             if (!string.IsNullOrEmpty(file)) {
                 MidiWriter.Save(file, project);
+            }
+        }
+
+        async void OnMenuExportMusicXML(object sender, RoutedEventArgs e) {
+            var project = DocManager.Inst.Project;
+            var file = await FilePicker.SaveFileAboutProject(
+                this, "menu.file.exportmusicxml", FilePicker.MUSICXML);
+            if (!string.IsNullOrEmpty(file)) {
+                MusicXML.Save(file, project);
             }
         }
 

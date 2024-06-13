@@ -162,6 +162,7 @@
   <system:String x:Key="menu.file.exportds.v2">Export DiffSinger Scripts To (v2)</system:String>
   <system:String x:Key="menu.file.exportds.v2withoutpitch">Export DiffSinger Scripts To (v2, without pitch curve)</system:String>
   <system:String x:Key="menu.file.exportmidi">Export Midi File</system:String>
+  <system:String x:Key="menu.file.exportmusicxml">Export MusicXML File</system:String>
   <system:String x:Key="menu.file.exportmixdown">Mixdown To Wav File</system:String>
   <system:String x:Key="menu.file.exportproject">Export Project</system:String>
   <system:String x:Key="menu.file.exportust">Export Ust Files</system:String>
